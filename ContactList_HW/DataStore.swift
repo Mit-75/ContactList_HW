@@ -75,13 +75,6 @@ final class DataStore {
         "zodac@mail.ru"
     ]
 
-func getShuffle() {
-    names.shuffle()
-    surnames.shuffle()
-    email.shuffle()
-    phoneNumber.shuffle()
-}
-
 func getArray() -> [DataStore] {
     
     var dataStores: [DataStore] = []
@@ -100,3 +93,9 @@ func getArray() -> [DataStore] {
     return dataStores
 }
 
+private func getShuffle() {
+    names.shuffle()
+    surnames.shuffle()
+    email.shuffle()
+    phoneNumber.shuffle()
+}

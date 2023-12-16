@@ -17,8 +17,8 @@ final class PersonsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        phone.text = dataStores.phoneNumber
-        email.text = dataStores.email
+        phone.text = ("Тел: \(dataStores.phoneNumber)")
+        email.text = ("E-mail: \(dataStores.email)")
         title = ("\(dataStores.name) \(dataStores.surname)")
         
     }

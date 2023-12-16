@@ -26,20 +26,20 @@ final class ContactViewController: UITableViewController {
     
     //MARK: - UITableViewDataSource
     
-    extension ContactViewController {
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            dataStores.count
-        }
-        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
-            let person = dataStores[indexPath.row]
-            var content = cell.defaultContentConfiguration()
-            content.text = ("\(person.name) \(person.surname)")
-            cell.contentConfiguration = content
-            
-            return cell
-        }
-        
+extension ContactViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        dataStores.count
     }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
+        let person = dataStores[indexPath.row]
+        var content = cell.defaultContentConfiguration()
+        content.text = ("\(person.name) \(person.surname)")
+        cell.contentConfiguration = content
+            
+        return cell
+    }
+        
+}
     
 
